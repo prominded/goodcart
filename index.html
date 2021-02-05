@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groche- Manitoba's Leading online grocery store</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <nav>
+        <div class="logo-wrapper"><img src="images/logo.png" alt="Logo"></div>
+       </nav>
+       <div>
+         <div class="header-img" ><h2> Manitoba's leading grocery store </h2></div>
+      </div>
+  </header>
+    <main>
+        <section id="content-wrapper">
+           <section id="product-area">
+              <div class="product-content">
+                  <div class="image-content">
+                      <img src="images/grapes-2.jpg" class="image-style" alt="Grapes">
+                      <div class="promo">PROMO </div>
+                      <div class="promo-text">Buy one bag and get another bag free!</div>
+                    
+                    </div>
+                  <div class="text-content">
+                      <h3>Grapes</h3>
+                      <p>Fresh quality grapes</p>
+                      <div class="price">$5.00/Bag</div>
+                      <div class="input-components">
+                          <input type="button" name="minus" class="btn-minus" onclick='decrement("grapes_qty_id", 0)' value="-">
+                          <input id="grapes_qty_id" type="text" name="qty" class="inp-qty" value="0" readonly >
+                          <input type="button" name="plus" class="btn-plus" onclick='increment("grapes_qty_id", 0)' value="+">
+                     </div>
+                     <button id="btn-grapes" onclick='buyItem("grapes_qty_id",0)'>BUY -></button>
+                  </div>
+              </div>
+            <div class="product-content">
+                <div class="image-content"><img src="images/apples.jpg" class="image-style" alt="Apples">
+                    <div class="promo">PROMO</div>
+                    <div class="promo-text">Buy two or more and get 20% off!</div>
+                     </div>
+                <div class="text-content">
+                    <h3>Apples</h3>
+                    <p>Well rounded apples</p>
+                    <div class="price">$3.00</div>
+                    <div class="input-components">
+                        <input type="button" name="minus" class="btn-minus" onclick='decrement("apples_qty_id", 1)' value="-">
+                        <input id="apples_qty_id" type="text" name="qty" class="inp-qty" value="0" readonly>
+                        <input type="button" name="plus" class="btn-plus" onclick='increment("apples_qty_id", 1)' value="+">
+                    </div>
+                    <button id="btn-apples" onclick='buyItem("apples_qty_id",1)'>BUY -></button>
+                </div>
+            </div>
+            <div class="product-content">
+                <div class="image-content">
+                    <img src="images/peaches-3.jpg" class="image-style" alt="Peaches">
+                  
+                </div>
+                <div class="text-content">
+                    <h3>Peaches</h3>
+                    <p>Tasty peaches</p>
+                    <div class="price">$7.00</div>
+                    <div class="input-components">
+                        <input type="button" name="minus" class="btn-minus" onclick='decrement("peaches_qty_id", 2)' value="-">
+                        <input id="peaches_qty_id" type="text" name="qty" class="inp-qty" value="0" readonly>
+                        <input type="button" name="plus" class="btn-plus" onclick='increment("peaches_qty_id", 2)' value="+">
+
+                    </div>
+                    <button id="btn-peaches" onclick='buyItem("peaches_qty_id",2)'>BUY -></button>
+                </div>
+            </div>
+
+           </section>     
+           <section id="checkout-area">
+               <div class="cart-header">CART</div>
+               <div class="cart-area">
+               <ul id="product-list" class="product-list"></ul>
+              
+
+                 <div class="action-area">
+                   <div class="price-total-wrapper">
+                       <div class="txt-total">Total:</div><div id="price-total" class="price-total">0.00</div>
+                  </div>
+                   <button>CHECKOUT</button>
+                </div>
+                   </div>
+              
+           </section>      
+        </section> 
+     
+    </main>
+    <footer class="footer-wrapper">
+        <div>&copy copyright 2021</div>
+    </footer>    
+</div>
+    <script src="js/main.js"></script>
+</body>
+</html>
